@@ -1,0 +1,30 @@
+<br>
+<div class="container">
+    <div class="my-2 text-left">
+        <button class="btn btn-rounded btn-success" type="button" [routerLink]="['/clientes/form']">Crear Cliente</button>
+    </div>
+    <table class="table table-dark table-hover">
+        <thead>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Fecha de nacimiento</th>
+            <th>Email</th>
+            <th>Opciones</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cliente of listaClientes">
+                <td> {{cliente.id}}</td>
+                <td>{{cliente.nombre}}</td>
+                <td>{{cliente.apellido}}</td>
+                <td>{{cliente.fecha}}</td>
+                <td>{{cliente.email}}</td>
+                <td>
+                    <button class="btn btn-success" type="button" name="button" [routerLink]="['/clientes', cliente.id]">Editar</button> &nbsp;
+                    <button class="btn btn-danger" type="button" name="button">Eliminar</button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

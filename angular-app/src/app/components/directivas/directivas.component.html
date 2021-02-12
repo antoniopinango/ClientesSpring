@@ -1,0 +1,12 @@
+<div class="container margenTop">
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            Lenguajes de Programación 
+        </div>
+        <ul class="list-group list-group-flush" *ngIf="bandera==true">
+            <li class="list-group-item" *ngFor="let lenguaje of listaLenguajes">{{lenguaje}}</li>
+        </ul>
+    </div>
+    <br>
+    <button type="button" class="btn btn-warning" (click)="mostrarOcultar()">{{bandera == true ? "Ocultar" : "Mostrar" }}</button>
+</div>
